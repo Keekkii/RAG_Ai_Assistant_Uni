@@ -49,7 +49,9 @@ def extract_sources(results: list) -> list:
         url = r.get("url", "")
         if not url:
             continue
-        if url not in best_by_url or r.get("rrf_score", 0) > best_by_url[url].get("rrf_score", 0):
+        score = r.get("rerank_score", r.get("rrf_score", 0))
+        existing_score = best_by_url[url].get("rerank_score", best_by_url[url].get("rrf_score", 0)) if url in best_by_url else -1
+        if score > existing_score:
             best_by_url[url] = r
     sources = []
     for url, r in best_by_url.items():
@@ -57,7 +59,8 @@ def extract_sources(results: list) -> list:
         match = re.match(r"^(.*?)\s*\(chunk\s+(\d+)\)\s*$", raw_title, re.IGNORECASE)
         page_title = match.group(1).strip() if match else raw_title.strip()
         chunk_num = int(match.group(2)) if match else 1
-        sources.append({"url": url, "title": page_title, "chunk": chunk_num, "_score": r.get("rrf_score", 0)})
+        score = r.get("rerank_score", r.get("rrf_score", 0))
+        sources.append({"url": url, "title": page_title, "chunk": chunk_num, "_score": score})
     sources.sort(key=lambda x: x["_score"], reverse=True)
     for s in sources:
         del s["_score"]

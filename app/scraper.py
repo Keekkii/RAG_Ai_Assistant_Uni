@@ -12,8 +12,8 @@ def scrape_page(url: str) -> dict:
 
     soup = BeautifulSoup(response.text, "html.parser")
 
-    # Remove scripts and styles
-    for tag in soup(["script", "style", "noscript"]):
+    # Remove scripts, styles and layout/navigation elements
+    for tag in soup(["script", "style", "noscript", "nav", "header", "footer"]):
         tag.decompose()
 
     title = soup.title.string.strip() if soup.title else "No Title"

@@ -162,7 +162,7 @@ def search_similar_documents(query: str, limit: int = 5):
     final_results = []
     for item in reranked[:limit]:
         doc = candidates[item["id"]]
-        doc["rrf_score"] = float(item["score"])
+        doc["rerank_score"] = float(item["score"])  # keep original rrf_score intact
         final_results.append(doc)
 
     return final_results
