@@ -43,7 +43,7 @@
   {
     "id": "q005",
     "question": "What is the Traveler platform?",
-    "ground_truth": "Traveler is a booking or travel-related platform developed by AlphaWave.",
+    "ground_truth": "Traveler is a Croatian tourist agency and online booking platform developed by AlphaWave, specialising in luxury villas and holiday homes along the Adriatic coast. The platform features advanced filtering, multilingual support, and a modern Vue.js frontend backed by Node.js and Laravel, delivering a fast, mobile-first experience for international guests booking high-end properties across Croatia.",
     "expected_urls": [
       "https://alphawave.hr/pages/traveler.html"
     ],
@@ -53,7 +53,7 @@
   {
     "id": "q006",
     "question": "What is the EcoCube project?",
-    "ground_truth": "EcoCube is a 3D interactive viewer or visualization project developed by AlphaWave.",
+    "ground_truth": "EcoCube is an interactive 3D web application developed by AlphaWave for MarServis, visualising their modular floating waste-collection station designed for sailors along the Adriatic. Built with Three.js and WebGL, it renders a technically accurate GLB model with HDR lighting and smooth orbit controls, while connecting to a live dashboard that links each physical component to its technical data, documentation and MRO information.",
     "expected_urls": [
       "https://alphawave.hr/pages/ecocube.html"
     ],
@@ -63,7 +63,7 @@
   {
     "id": "q007",
     "question": "What is the DPP-Compliant Asset Management Platform?",
-    "ground_truth": "The DPP-Compliant Asset Management Platform is a solution built by AlphaWave that meets Digital Product Passport compliance requirements for asset management.",
+    "ground_truth": "The DPP-Compliant Asset Management Platform is a regulatory-ready solution built by AlphaWave using Laravel and PostgreSQL, designed to give industrial assets full lifecycle traceability through a structured REST API. It models assets, components, suppliers, certifications and lifecycle events under a controlled schema, with fine-grained access control, OpenAPI documentation, and pgvector-powered RAG readiness for querying technical documents and compliance evidence.",
     "expected_urls": [
       "https://alphawave.hr/pages/information/DPP_Compliant.html"
     ],
@@ -73,7 +73,7 @@
   {
     "id": "q008",
     "question": "How does AlphaWave implement RAG in production?",
-    "ground_truth": "AlphaWave implements production RAG with hybrid search combining vector similarity and keyword matching, reranking with a cross-encoder, and a local LLM for privacy-focused generation.",
+    "ground_truth": "AlphaWave implements RAG in production with an evidence-first approach: the assistant returns answers alongside the source documents and specific retrieved chunks used to generate them. This design prioritises traceability, allowing users to verify answers, audit outputs and debug retrieval failures. A real-world example is the UNIRI Sports Center AI Assistant, built on heterogeneous sources including documents, pages and structured data.",
     "expected_urls": [
       "https://alphawave.hr/pages/information/rag.html"
     ],
@@ -83,7 +83,7 @@
   {
     "id": "q009",
     "question": "What is Computer Vision used for at AlphaWave?",
-    "ground_truth": "AlphaWave uses Computer Vision for visual analysis and processing tasks in their projects and client solutions.",
+    "ground_truth": "AlphaWave applies computer vision to real-time edge AI deployments for smart cities and port operations. Using YOLO-based detection, object tracking and zone logic running on edge GPU devices, they transform live camera feeds into structured incident data — detecting waste overflow, illegal dumping and bin damage for municipalities, and monitoring perimeter security, safety compliance and asset flow in port environments. The output feeds directly into dispatch, ticketing and control room workflows rather than relying on raw video streams.",
     "expected_urls": [
       "https://alphawave.hr/pages/information/Computer_vision.html"
     ],
@@ -93,7 +93,7 @@
   {
     "id": "q010",
     "question": "Why does AlphaWave use Laravel for backend development?",
-    "ground_truth": "AlphaWave uses Laravel for its robust ecosystem, MVC architecture, and suitability for building secure and scalable backend APIs.",
+    "ground_truth": "AlphaWave uses Laravel as their default backend framework because it minimises time-to-production while keeping codebases maintainable long-term. Its expressive routing, first-class queue system and disciplined migration tooling let teams ship robust products quickly without sacrificing structure. Built on Symfony packages under the hood, Laravel gives AlphaWave a mature, reliable foundation — with Symfony or Django chosen only when a project's specific requirements clearly favour them.",
     "expected_urls": [
       "https://alphawave.hr/pages/information/laravel.html"
     ],
@@ -103,7 +103,7 @@
   {
     "id": "q011",
     "question": "What are AlphaWave's 3D brochure capabilities?",
-    "ground_truth": "AlphaWave creates interactive 3D brochures for digital marketing and product presentations using WebGL-based rendering.",
+    "ground_truth": "AlphaWave builds interactive 3D brochures that take engineering-grade CAD models through a full pipeline — from material validation in SolidWorks and optimisation in Blender, to glTF export and Three.js/WebGL integration in the browser. Each component in the model can be linked to structured asset data, documentation, maintenance history and assembly instructions, turning a visual product presentation into a lightweight operational tool combining a 3D brochure, asset registry and document management in one.",
     "expected_urls": [
       "https://alphawave.hr/pages/information/3D_Brochures.html"
     ],
@@ -113,7 +113,7 @@
   {
     "id": "q012",
     "question": "What interactive 3D web applications does AlphaWave build?",
-    "ground_truth": "AlphaWave builds interactive 3D web applications including product configurators, 3D viewers, and immersive experiences using modern web technologies.",
+    "ground_truth": "AlphaWave builds interactive 3D web applications for marine engineering support, turning complex CAD models into browser-based experiences where teams can explore equipment, click individual components and instantly access structured asset data, maintenance history and documentation. Built on a pipeline from ViaKornel-verified CAD through Blender optimisation to Three.js/WebGL delivery, the result combines a 3D brochure, asset registry, document management and MRO functionality in a single in-browser tool — demonstrated in the ECO Cube delivery for MarServis.",
     "expected_urls": [
       "https://alphawave.hr/pages/information/Interactive3D.html"
     ],
@@ -123,7 +123,7 @@
   {
     "id": "q013",
     "question": "What services does AlphaWave offer to clients?",
-    "ground_truth": "AlphaWave offers AI development, frontend and backend development, 3D web experiences, cloud infrastructure, and custom digital product development.",
+    "ground_truth": "AlphaWave offers end-to-end digital product development across three core areas: software development (frontend and backend), AI development and integration, and 3D design and animation. On the software side they build scalable web applications with clean architecture and production-ready performance. Their AI offering covers private self-hosted solutions including local LLMs and RAG assistants that help organisations automate workflows while maintaining full control over data, security and compliance. On the 3D side they turn complex CAD models and ideas into interactive web-based experiences, visualisations and marine engineering tools. Across all areas their focus is on presenting information in engaging, innovative ways — from web animation and interactive 3D models to AI interfaces and VR/AR applications.",
     "expected_urls": [
       "https://alphawave.hr/pages/services.html",
       "https://alphawave.hr/pages/about-us.html"
@@ -134,7 +134,7 @@
   {
     "id": "q014",
     "question": "What is AlphaWave's privacy policy regarding personal data?",
-    "ground_truth": "AlphaWave collects and processes personal data in accordance with GDPR, using data only for service delivery and protecting user privacy.",
+    "ground_truth": "AlphaWave collects and processes personal data in accordance with GDPR, acting as Data Controller under legal bases that include contractual necessity, user consent, legitimate interest and legal compliance. Data is retained only as long as necessary and EEA residents hold full rights to access, update, delete, restrict or port their personal data at any time. Standard log data such as IP addresses and browser information is collected for analytics only and is not linked to personally identifiable information. AlphaWave does not control third-party advertiser cookies and does not knowingly collect data from children under 13.",
     "expected_urls": [
       "https://alphawave.hr/pages/legal/privacypolicy.html"
     ],
@@ -144,7 +144,7 @@
   {
     "id": "q015",
     "question": "Does AlphaWave use local AI models to protect data privacy?",
-    "ground_truth": "Yes, AlphaWave develops privacy-focused AI solutions using local LLM models where data remains on the client's system and is not sent to external servers.",
+    "ground_truth": "Yes, AlphaWave builds self-hosted, privacy-focused AI solutions where data stays entirely within the client's own infrastructure — no cloud lock-in, no external data transfers. This includes local LLM-powered chatbots, RAG knowledge assistants, agentic workflow automation and Edge AI deployments, all designed for organisations that need full control over their data, security and compliance. A concrete example is the UNIRI Sports Center AI Assistant, built on a locally hosted model with complete data privacy.",
     "expected_urls": [
       "https://alphawave.hr/pages/aidevelopment.html"
     ],
@@ -154,7 +154,7 @@
   {
     "id": "q016",
     "question": "What frontend technologies does AlphaWave specialize in?",
-    "ground_truth": "AlphaWave specializes in modern frontend technologies for building advanced web applications with interactive and 3D capabilities.",
+    "ground_truth": "AlphaWave specialises in frontend development with a focus on presenting information in engaging, innovative ways — from pixel-perfect, mobile-first web interfaces and interactive animations to 3D web experiences, AI interfaces and VR/AR applications. Their full-cycle approach covers everything from UX/UI design and web animation through to production-ready frontend delivery, with project-specific implementations including Vue.js for booking platforms and Three.js/WebGL for interactive 3D brochures.",
     "expected_urls": [
       "https://alphawave.hr/pages/services.html",
       "https://alphawave.hr/pages/about-us.html"
@@ -165,7 +165,7 @@
   {
     "id": "q017",
     "question": "What is AlphaWave's approach to building AI chatbots?",
-    "ground_truth": "AlphaWave builds AI chatbots using RAG architecture with local LLMs, ensuring data privacy and providing accurate answers grounded in company-specific knowledge.",
+    "ground_truth": "AlphaWave builds self-hosted AI chatbots using RAG architecture and local LLMs, where data stays entirely within the client's own infrastructure — no cloud dependency, no external data transfers. Rather than relying on a model's training knowledge, the system retrieves up-to-date, organisation-specific evidence at query time, making smaller 7B–13B models viable and cost-efficient. Answers are returned alongside their source documents and retrieved chunks, giving users full traceability and teams the ability to audit outputs and debug failures. The UNIRI Sports Center AI Assistant is a live example of this approach in production.",
     "expected_urls": [
       "https://alphawave.hr/pages/aidevelopment.html",
       "https://alphawave.hr/pages/information/rag.html"
@@ -176,7 +176,7 @@
   {
     "id": "q018",
     "question": "What makes AlphaWave different from other IT companies?",
-    "ground_truth": "AlphaWave differentiates itself through focus on privacy-first local AI, 3D web experiences, and custom digital products tailored to client needs.",
+    "ground_truth": "AlphaWave differentiates itself by combining software engineering, AI and 3D visualisation into full-pipeline solutions where data stays private, outputs are traceable and systems are operationally useful rather than just technically impressive. Their self-hosted RAG assistants return evidence alongside answers, their 3D brochures connect to live asset data and maintenance history, and their edge AI deployments run inference directly on physical hardware like NVIDIA Jetson — all without cloud lock-in. Across every area, EU compliance, engineering accuracy and real operational alignment are treated as core requirements from the start, not afterthoughts.",
     "expected_urls": [
       "https://alphawave.hr/pages/about-us.html",
       "https://alphawave.hr/pages/aidevelopment.html"
@@ -187,7 +187,7 @@
   {
     "id": "q019",
     "question": "How does AlphaWave handle data retention in their privacy policy?",
-    "ground_truth": "AlphaWave retains personal data only as long as necessary for the purpose it was collected, in accordance with GDPR regulations.",
+    "ground_truth": "AlphaWave retains personal data only as long as necessary for the purposes outlined in their privacy policy, in full accordance with GDPR. Data may be kept beyond that only to comply with legal obligations, resolve disputes or enforce company policies. EEA residents can request to view or remove any personal data held about them at any time by contacting the Data Protection Officer, Ivan Marin, directly. Standard log data such as IP addresses and browser information collected for analytics is not linked to any personally identifiable information.",
     "expected_urls": [
       "https://alphawave.hr/pages/legal/privacypolicy.html"
     ],
@@ -197,7 +197,7 @@
   {
     "id": "q020",
     "question": "What cloud services does AlphaWave offer?",
-    "ground_truth": "AlphaWave offers cloud infrastructure and cloud systems as part of their digital product development services.",
+    "ground_truth": "AlphaWave's documented approach prioritises self-hosted and on-premise solutions over cloud-based ones, with a stated focus on avoiding cloud lock-in and keeping data within the client's own infrastructure. While their FAQ lists 'Do you offer cloud services and DevOps support?' as a question, the actual answer was not included in the provided documents, so a complete and accurate answer cannot be given based on available information alone.",
     "expected_urls": [
       "https://alphawave.hr/pages/services.html",
       "https://alphawave.hr/pages/about-us.html"
@@ -208,7 +208,7 @@
   {
     "id": "q021",
     "question": "What is RAG and how does it work?",
-    "ground_truth": "RAG (Retrieval-Augmented Generation) combines a retrieval system that fetches relevant documents with a language model that generates answers based on those documents.",
+    "ground_truth": "RAG (Retrieval-Augmented Generation) solves a core limitation of LLMs — their knowledge is frozen at training time and cannot automatically reflect updates in internal policies, procedures, price lists or documentation. Rather than relying on the model's memorised training data, RAG separates the system into a retrieval layer that fetches relevant, up-to-date organisation-specific evidence at query time, and a generation layer where the LLM focuses on reasoning and wording from that evidence. In practice this makes smaller, cost-efficient 7B–13B models viable, since the model doesn't need to know everything — it just needs to use the right context well. The pipeline splits into ingestion, where documents are cleaned, chunked, embedded into vectors and stored with metadata, and query time, where the retriever fetches the most relevant chunks and passes them to the LLM to generate a grounded, traceable answer.",
     "expected_urls": [
       "https://alphawave.hr/pages/information/rag.html"
     ],
@@ -218,7 +218,7 @@
   {
     "id": "q022",
     "question": "What projects has AlphaWave built for the University of Rijeka?",
-    "ground_truth": "AlphaWave built the UNIRI Sports Center AI Assistant for the University of Rijeka.",
+    "ground_truth": "AlphaWave built the UNIRI Sports Center AI Assistant for the University of Rijeka — a self-hosted, privacy-first RAG system that sits on top of heterogeneous sources including documents, pages and structured data. Rather than relying on a model's training knowledge, the assistant retrieves up-to-date, source-grounded answers with full traceability, returning responses alongside the originating documents and retrieved chunks so users can verify outputs and teams can audit failures. It serves as a concrete real-world example of AlphaWave's evidence-first approach to production AI.",
     "expected_urls": [
       "https://alphawave.hr/pages/uniriaiassistent.html"
     ],
@@ -228,7 +228,7 @@
   {
     "id": "q023",
     "question": "Does AlphaWave offer web development services?",
-    "ground_truth": "Yes, AlphaWave offers web development including frontend, backend, and 3D web experiences.",
+    "ground_truth": "Yes, AlphaWave offers full-cycle web development spanning frontend, backend and 3D web experiences. On the frontend they deliver pixel-perfect, mobile-first interfaces with interactive animations, AI interfaces and VR/AR applications, with project-specific implementations including Vue.js for booking platforms and Three.js/WebGL for interactive 3D brochures. On the backend, Laravel is their default framework, chosen for fast delivery and long-term maintainability, supported by disciplined database migrations, production-grade queue systems and clean REST API design. Their full-cycle approach also covers UX/UI design, branding, SEO and performance optimisation — with the Traveler booking platform and EcoCube 3D viewer as concrete real-world examples of this end-to-end capability.",
     "expected_urls": [
       "https://alphawave.hr/pages/services.html"
     ],
@@ -250,5 +250,45 @@
     "expected_urls": [],
     "category": "negative",
     "difficulty": "negative"
+  },
+  {
+    "id": "q026",
+    "question": "How many employees does AlphaWave have?",
+    "ground_truth": "",
+    "expected_urls": [],
+    "category": "negative",
+    "difficulty": "negative"
+  },
+  {
+    "id": "q027",
+    "question": "What is AlphaWave's founding year?",
+    "ground_truth": "",
+    "expected_urls": [],
+    "category": "negative",
+    "difficulty": "negative"
+  },
+  {
+    "id": "q028",
+    "question": "Does AlphaWave have offices outside of Rijeka?",
+    "ground_truth": "",
+    "expected_urls": [],
+    "category": "negative",
+    "difficulty": "negative"
+  },
+  {
+    "id": "q029",
+    "question": "Who is AlphaWave's Data Protection Officer?",
+    "ground_truth": "Ivan Marin is AlphaWave's Data Protection Officer, reachable at ivan@alphawave.hr or +385 91 586 6923.",
+    "expected_urls": ["https://alphawave.hr/pages/legal/privacypolicy.html"],
+    "category": "company_info",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q030",
+    "question": "What backend framework does AlphaWave use by default and why?",
+    "ground_truth": "AlphaWave uses Laravel as their default backend framework because it minimises time-to-production while keeping codebases maintainable long-term, offering expressive routing, a first-class queue system, disciplined migration tooling and a mature foundation built on Symfony packages under the hood.",
+    "expected_urls": ["https://alphawave.hr/pages/information/laravel.html"],
+    "category": "technology",
+    "difficulty": "medium"
   }
 ]
