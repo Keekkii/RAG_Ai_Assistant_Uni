@@ -1,0 +1,254 @@
+[
+  {
+    "id": "q001",
+    "question": "What does AlphaWave do?",
+    "ground_truth": "AlphaWave is an IT company focused on local AI development, advanced frontend and backend solutions, 3D web experiences, cloud systems, and custom digital products.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/about-us.html",
+      "https://alphawave.hr/pages/aidevelopment.html"
+    ],
+    "category": "general",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q002",
+    "question": "What AI services does AlphaWave provide?",
+    "ground_truth": "AlphaWave provides local AI development services including RAG assistants, privacy-focused LLM-powered chatbots, edge intelligence, and production AI solutions where data stays on-premises.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/aidevelopment.html"
+    ],
+    "category": "services",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q003",
+    "question": "How can I contact AlphaWave?",
+    "ground_truth": "AlphaWave can be contacted via email, phone, or WhatsApp. Contact information is available on their contact page.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/contact.html"
+    ],
+    "category": "contact",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q004",
+    "question": "What is the UNIRI Sports Center AI Assistant?",
+    "ground_truth": "The UNIRI Sports Center AI Assistant is a RAG-powered chatbot built for the University of Rijeka Sports Center, helping users find information about facilities, schedules, and services.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/uniriaiassistent.html"
+    ],
+    "category": "project",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q005",
+    "question": "What is the Traveler platform?",
+    "ground_truth": "Traveler is a booking or travel-related platform developed by AlphaWave.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/traveler.html"
+    ],
+    "category": "project",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q006",
+    "question": "What is the EcoCube project?",
+    "ground_truth": "EcoCube is a 3D interactive viewer or visualization project developed by AlphaWave.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/ecocube.html"
+    ],
+    "category": "project",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q007",
+    "question": "What is the DPP-Compliant Asset Management Platform?",
+    "ground_truth": "The DPP-Compliant Asset Management Platform is a solution built by AlphaWave that meets Digital Product Passport compliance requirements for asset management.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/information/DPP_Compliant.html"
+    ],
+    "category": "project",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q008",
+    "question": "How does AlphaWave implement RAG in production?",
+    "ground_truth": "AlphaWave implements production RAG with hybrid search combining vector similarity and keyword matching, reranking with a cross-encoder, and a local LLM for privacy-focused generation.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/information/rag.html"
+    ],
+    "category": "technical",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q009",
+    "question": "What is Computer Vision used for at AlphaWave?",
+    "ground_truth": "AlphaWave uses Computer Vision for visual analysis and processing tasks in their projects and client solutions.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/information/Computer_vision.html"
+    ],
+    "category": "technical",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q010",
+    "question": "Why does AlphaWave use Laravel for backend development?",
+    "ground_truth": "AlphaWave uses Laravel for its robust ecosystem, MVC architecture, and suitability for building secure and scalable backend APIs.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/information/laravel.html"
+    ],
+    "category": "technical",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q011",
+    "question": "What are AlphaWave's 3D brochure capabilities?",
+    "ground_truth": "AlphaWave creates interactive 3D brochures for digital marketing and product presentations using WebGL-based rendering.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/information/3D_Brochures.html"
+    ],
+    "category": "technical",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q012",
+    "question": "What interactive 3D web applications does AlphaWave build?",
+    "ground_truth": "AlphaWave builds interactive 3D web applications including product configurators, 3D viewers, and immersive experiences using modern web technologies.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/information/Interactive3D.html"
+    ],
+    "category": "technical",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q013",
+    "question": "What services does AlphaWave offer to clients?",
+    "ground_truth": "AlphaWave offers AI development, frontend and backend development, 3D web experiences, cloud infrastructure, and custom digital product development.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/services.html",
+      "https://alphawave.hr/pages/about-us.html"
+    ],
+    "category": "services",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q014",
+    "question": "What is AlphaWave's privacy policy regarding personal data?",
+    "ground_truth": "AlphaWave collects and processes personal data in accordance with GDPR, using data only for service delivery and protecting user privacy.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/legal/privacypolicy.html"
+    ],
+    "category": "legal",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q015",
+    "question": "Does AlphaWave use local AI models to protect data privacy?",
+    "ground_truth": "Yes, AlphaWave develops privacy-focused AI solutions using local LLM models where data remains on the client's system and is not sent to external servers.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/aidevelopment.html"
+    ],
+    "category": "technical",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q016",
+    "question": "What frontend technologies does AlphaWave specialize in?",
+    "ground_truth": "AlphaWave specializes in modern frontend technologies for building advanced web applications with interactive and 3D capabilities.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/services.html",
+      "https://alphawave.hr/pages/about-us.html"
+    ],
+    "category": "technical",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q017",
+    "question": "What is AlphaWave's approach to building AI chatbots?",
+    "ground_truth": "AlphaWave builds AI chatbots using RAG architecture with local LLMs, ensuring data privacy and providing accurate answers grounded in company-specific knowledge.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/aidevelopment.html",
+      "https://alphawave.hr/pages/information/rag.html"
+    ],
+    "category": "technical",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q018",
+    "question": "What makes AlphaWave different from other IT companies?",
+    "ground_truth": "AlphaWave differentiates itself through focus on privacy-first local AI, 3D web experiences, and custom digital products tailored to client needs.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/about-us.html",
+      "https://alphawave.hr/pages/aidevelopment.html"
+    ],
+    "category": "general",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q019",
+    "question": "How does AlphaWave handle data retention in their privacy policy?",
+    "ground_truth": "AlphaWave retains personal data only as long as necessary for the purpose it was collected, in accordance with GDPR regulations.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/legal/privacypolicy.html"
+    ],
+    "category": "legal",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q020",
+    "question": "What cloud services does AlphaWave offer?",
+    "ground_truth": "AlphaWave offers cloud infrastructure and cloud systems as part of their digital product development services.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/services.html",
+      "https://alphawave.hr/pages/about-us.html"
+    ],
+    "category": "services",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q021",
+    "question": "What is RAG and how does it work?",
+    "ground_truth": "RAG (Retrieval-Augmented Generation) combines a retrieval system that fetches relevant documents with a language model that generates answers based on those documents.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/information/rag.html"
+    ],
+    "category": "technical",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q022",
+    "question": "What projects has AlphaWave built for the University of Rijeka?",
+    "ground_truth": "AlphaWave built the UNIRI Sports Center AI Assistant for the University of Rijeka.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/uniriaiassistent.html"
+    ],
+    "category": "project",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q023",
+    "question": "Does AlphaWave offer web development services?",
+    "ground_truth": "Yes, AlphaWave offers web development including frontend, backend, and 3D web experiences.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/services.html"
+    ],
+    "category": "services",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q024",
+    "question": "What is AlphaWave's stock price?",
+    "ground_truth": "",
+    "expected_urls": [],
+    "category": "negative",
+    "difficulty": "negative"
+  },
+  {
+    "id": "q025",
+    "question": "What is AlphaWave's annual revenue?",
+    "ground_truth": "",
+    "expected_urls": [],
+    "category": "negative",
+    "difficulty": "negative"
+  }
+]

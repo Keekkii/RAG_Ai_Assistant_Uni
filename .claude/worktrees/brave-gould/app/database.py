@@ -1,11 +1,6 @@
-import re
-
 import psycopg2
 from psycopg2.extras import RealDictCursor
 from app.embeddings import generate_embedding
-from flashrank import Ranker, RerankRequest
-
-reranker = Ranker(model_name="ms-marco-MiniLM-L-12-v2", cache_dir="/tmp/flashrank")
 
 
 DB_CONFIG = {
@@ -31,13 +26,19 @@ def get_connection():
 # -------------------------
 # Keyword extraction (simple)
 # -------------------------
-def extract_keywords(query: str) -> list[str]:
-    words = re.split(r"[\s\-]+", query.lower())
+def extract_keywords(query: str):
+    words = query.lower().split()
+    # Common words we want to ignore
+    stop_words = {"what", "where", "when", "how", "who", "this", "that", "with", "from", "the", "and", "for", "your", "with", "is", "are"}
+    
     keywords = []
     for w in words:
         clean = w.strip("?,.!")
-        if len(clean) >= 3 or clean in ["ai", "io", "ux", "3d"]:
+        # Keep words that are 3+ chars and NOT in stop_words
+        # OR special important acronyms
+        if (len(clean) >= 3 and clean not in stop_words) or clean in ["ai", "io", "ux", "3d"]:
             keywords.append(clean)
+    
     return keywords
 
 
@@ -77,19 +78,19 @@ def search_similar_documents(query: str, limit: int = 5):
     conn = get_connection()
     cursor = conn.cursor()
 
-    # 1. Fetch Top 40 by Vector Similarity
+    # 1. Fetch Top 20 by Vector Similarity
     sql_vector = """
-        SELECT id, url, title, content,
+        SELECT id, url, title, content, 
                (1 - (embedding <=> %s)) as score
         FROM documents
         WHERE embedding IS NOT NULL
         ORDER BY embedding <=> %s
-        LIMIT 40;
+        LIMIT 20;
     """
     cursor.execute(sql_vector, (vector_str, vector_str))
     vector_results = cursor.fetchall()
 
-    # 2. Fetch Top 40 by Keyword Matching
+    # 2. Fetch Top 20 by Keyword Matching
     keyword_results = []
     if keywords:
         like_clauses = []
@@ -97,16 +98,16 @@ def search_similar_documents(query: str, limit: int = 5):
         for word in keywords:
             like_clauses.append("(title ILIKE %s OR content ILIKE %s)")
             params.extend([f"%{word}%", f"%{word}%"])
-
+        
         keyword_sql = " + ".join([f"(CASE WHEN {clause} THEN 1 ELSE 0 END)" for clause in like_clauses])
-
+        
         sql_keyword = f"""
             SELECT id, url, title, content,
                    ({keyword_sql}) as score
             FROM documents
             WHERE { " OR ".join(like_clauses) }
             ORDER BY ({keyword_sql}) DESC
-            LIMIT 40;
+            LIMIT 20;
         """
         # We need to repeat params for: 1. SELECT, 2. WHERE, 3. ORDER BY
         all_params = params * 3
@@ -133,32 +134,17 @@ def search_similar_documents(query: str, limit: int = 5):
     add_to_scores(vector_results)
     add_to_scores(keyword_results)
 
-    # Sort by RRF score, take top 20 diverse candidates for reranking (max 2 per URL)
+    # Sort by RRF score
     sorted_ids = sorted(scores.keys(), key=lambda x: scores[x], reverse=True)
-    candidates = []
-    url_counts = {}
-    for doc_id in sorted_ids:
-        if len(candidates) >= 20:
-            break
-        doc = doc_map[doc_id]
-        url = doc.get("url", "")
-        if url_counts.get(url, 0) >= 2:
-            continue
-        url_counts[url] = url_counts.get(url, 0) + 1
-        doc["rrf_score"] = scores[doc_id]
-        doc["distance"] = 1 - doc.get("score", 0) if "score" in doc else 1.0
-        candidates.append(doc)
-
-    # Rerank candidates with FlashRank cross-encoder
-    passages = [{"id": i, "text": doc["content"]} for i, doc in enumerate(candidates)]
-    rerank_request = RerankRequest(query=query, passages=passages)
-    reranked = reranker.rerank(rerank_request)
-
-    # Build final results in reranked order
+    
+    # Return top 'limit' results
     final_results = []
-    for item in reranked[:limit]:
-        doc = candidates[item["id"]]
-        doc["rerank_score"] = float(item["score"])  # keep original rrf_score intact
+    for doc_id in sorted_ids[:limit]:
+        doc = doc_map[doc_id]
+        # Attach the RRF score for visibility
+        doc["rrf_score"] = scores[doc_id]
+        # Map distance for compatibility with rag.py logs
+        doc["distance"] = 1 - doc.get("score", 0) if "score" in doc else 1.0
         final_results.append(doc)
 
     return final_results

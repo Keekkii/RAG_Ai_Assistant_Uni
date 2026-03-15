@@ -1,0 +1,396 @@
+{
+  "timestamp": "2026-03-14T15:15:00.618663",
+  "retrieval": {
+    "metrics": {
+      "n_questions": 23,
+      "hit_rate": {
+        "@1": 0.5652,
+        "@3": 0.7391,
+        "@5": 0.8261
+      },
+      "mrr": 0.6667,
+      "precision": {
+        "@1": 0.5652,
+        "@3": 0.3913,
+        "@5": 0.3043
+      }
+    },
+    "per_query": [
+      {
+        "id": "q001",
+        "question": "What does AlphaWave do?",
+        "expected_urls": [
+          "https://alphawave.hr/pages/aidevelopment.html",
+          "https://alphawave.hr/pages/about-us.html"
+        ],
+        "retrieved_urls": [
+          "https://alphawave.hr/pages/aidevelopment.html",
+          "https://alphawave.hr/pages/services.html",
+          "https://alphawave.hr/pages/about-us.html",
+          "https://alphawave.hr/pages/softwaredev.html",
+          "https://alphawave.hr"
+        ],
+        "first_hit_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "id": "q002",
+        "question": "What AI services does AlphaWave provide?",
+        "expected_urls": [
+          "https://alphawave.hr/pages/aidevelopment.html"
+        ],
+        "retrieved_urls": [
+          "https://alphawave.hr/pages/aidevelopment.html",
+          "https://alphawave.hr/pages/softwaredev.html",
+          "https://alphawave.hr/pages/aidevelopment.html",
+          "https://alphawave.hr/pages/services.html",
+          "https://alphawave.hr/pages/about-us.html"
+        ],
+        "first_hit_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "id": "q003",
+        "question": "How can I contact AlphaWave?",
+        "expected_urls": [
+          "https://alphawave.hr/pages/contact.html"
+        ],
+        "retrieved_urls": [
+          "https://alphawave.hr/pages/aidevelopment.html",
+          "https://alphawave.hr/pages/services.html",
+          "https://alphawave.hr/pages/softwaredev.html",
+          "https://alphawave.hr/pages/contact.html",
+          "https://alphawave.hr/pages/legal/privacypolicy.html"
+        ],
+        "first_hit_rank": 4,
+        "reciprocal_rank": 0.25
+      },
+      {
+        "id": "q004",
+        "question": "What is the UNIRI Sports Center AI Assistant?",
+        "expected_urls": [
+          "https://alphawave.hr/pages/uniriaiassistent.html"
+        ],
+        "retrieved_urls": [
+          "https://alphawave.hr/pages/uniriaiassistent.html",
+          "https://alphawave.hr/pages/uniriaiassistent.html",
+          "https://alphawave.hr/pages/information/rag.html",
+          "https://alphawave.hr/",
+          "https://alphawave.hr"
+        ],
+        "first_hit_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "id": "q005",
+        "question": "What is the Traveler platform?",
+        "expected_urls": [
+          "https://alphawave.hr/pages/traveler.html"
+        ],
+        "retrieved_urls": [
+          "https://alphawave.hr/pages/traveler.html",
+          "https://alphawave.hr/pages/traveler.html",
+          "https://alphawave.hr/pages/softwaredev.html",
+          "https://alphawave.hr/",
+          "https://alphawave.hr"
+        ],
+        "first_hit_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "id": "q006",
+        "question": "What is the EcoCube project?",
+        "expected_urls": [
+          "https://alphawave.hr/pages/ecocube.html"
+        ],
+        "retrieved_urls": [
+          "https://alphawave.hr/pages/ecocube.html",
+          "https://alphawave.hr/pages/softwaredev.html",
+          "https://alphawave.hr/",
+          "https://alphawave.hr/pages/information/Interactive3D.html",
+          "https://alphawave.hr/pages/ecocube.html"
+        ],
+        "first_hit_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "id": "q007",
+        "question": "What is the DPP-Compliant Asset Management Platform?",
+        "expected_urls": [
+          "https://alphawave.hr/pages/information/DPP_Compliant.html"
+        ],
+        "retrieved_urls": [
+          "https://alphawave.hr/pages/about-us.html",
+          "https://alphawave.hr",
+          "https://alphawave.hr/",
+          "https://alphawave.hr/pages/about-us.html",
+          "https://alphawave.hr/"
+        ],
+        "first_hit_rank": null,
+        "reciprocal_rank": 0.0
+      },
+      {
+        "id": "q008",
+        "question": "How does AlphaWave implement RAG in production?",
+        "expected_urls": [
+          "https://alphawave.hr/pages/information/rag.html"
+        ],
+        "retrieved_urls": [
+          "https://alphawave.hr/pages/information/Computer_vision.html",
+          "https://alphawave.hr/pages/services.html",
+          "https://alphawave.hr/pages/information/rag.html",
+          "https://alphawave.hr/pages/about-us.html",
+          "https://alphawave.hr/pages/aidevelopment.html"
+        ],
+        "first_hit_rank": 3,
+        "reciprocal_rank": 0.3333333333333333
+      },
+      {
+        "id": "q009",
+        "question": "What is Computer Vision used for at AlphaWave?",
+        "expected_urls": [
+          "https://alphawave.hr/pages/information/Computer_vision.html"
+        ],
+        "retrieved_urls": [
+          "https://alphawave.hr/pages/legal/privacypolicy.html",
+          "https://alphawave.hr/pages/about-us.html",
+          "https://alphawave.hr/pages/ecocube.html",
+          "https://alphawave.hr/pages/aidevelopment.html",
+          "https://alphawave.hr/pages/traveler.html"
+        ],
+        "first_hit_rank": null,
+        "reciprocal_rank": 0.0
+      },
+      {
+        "id": "q010",
+        "question": "Why does AlphaWave use Laravel for backend development?",
+        "expected_urls": [
+          "https://alphawave.hr/pages/information/laravel.html"
+        ],
+        "retrieved_urls": [
+          "https://alphawave.hr/pages/information/laravel.html",
+          "https://alphawave.hr/pages/information/laravel.html",
+          "https://alphawave.hr/",
+          "https://alphawave.hr",
+          "https://alphawave.hr/pages/about-us.html"
+        ],
+        "first_hit_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "id": "q011",
+        "question": "What are AlphaWave's 3D brochure capabilities?",
+        "expected_urls": [
+          "https://alphawave.hr/pages/information/3D_Brochures.html"
+        ],
+        "retrieved_urls": [
+          "https://alphawave.hr/pages/information/3D_Brochures.html",
+          "https://alphawave.hr/pages/information/Interactive3D.html",
+          "https://alphawave.hr/",
+          "https://alphawave.hr",
+          "https://alphawave.hr/pages/about-us.html"
+        ],
+        "first_hit_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "id": "q012",
+        "question": "What interactive 3D web applications does AlphaWave build?",
+        "expected_urls": [
+          "https://alphawave.hr/pages/information/Interactive3D.html"
+        ],
+        "retrieved_urls": [
+          "https://alphawave.hr/pages/information/3D_Brochures.html",
+          "https://alphawave.hr/pages/about-us.html",
+          "https://alphawave.hr/pages/softwaredev.html",
+          "https://alphawave.hr/pages/information/Interactive3D.html",
+          "https://alphawave.hr/pages/aidevelopment.html"
+        ],
+        "first_hit_rank": 4,
+        "reciprocal_rank": 0.25
+      },
+      {
+        "id": "q013",
+        "question": "What services does AlphaWave offer to clients?",
+        "expected_urls": [
+          "https://alphawave.hr/pages/about-us.html",
+          "https://alphawave.hr/pages/services.html"
+        ],
+        "retrieved_urls": [
+          "https://alphawave.hr/pages/services.html",
+          "https://alphawave.hr/pages/about-us.html",
+          "https://alphawave.hr/pages/portfolio.html",
+          "https://alphawave.hr/pages/softwaredev.html",
+          "https://alphawave.hr/pages/aidevelopment.html"
+        ],
+        "first_hit_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "id": "q014",
+        "question": "What is AlphaWave's privacy policy regarding personal data?",
+        "expected_urls": [
+          "https://alphawave.hr/pages/legal/privacypolicy.html"
+        ],
+        "retrieved_urls": [
+          "https://alphawave.hr/pages/legal/privacypolicy.html",
+          "https://alphawave.hr/pages/legal/privacypolicy.html",
+          "https://alphawave.hr/pages/aidevelopment.html",
+          "https://alphawave.hr/pages/information/Computer_vision.html",
+          "https://alphawave.hr/pages/contact.html"
+        ],
+        "first_hit_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "id": "q015",
+        "question": "Does AlphaWave use local AI models to protect data privacy?",
+        "expected_urls": [
+          "https://alphawave.hr/pages/aidevelopment.html"
+        ],
+        "retrieved_urls": [
+          "https://alphawave.hr/pages/services.html",
+          "https://alphawave.hr/pages/aidevelopment.html",
+          "https://alphawave.hr/pages/aidevelopment.html",
+          "https://alphawave.hr/pages/services.html",
+          "https://alphawave.hr/pages/softwaredev.html"
+        ],
+        "first_hit_rank": 2,
+        "reciprocal_rank": 0.5
+      },
+      {
+        "id": "q016",
+        "question": "What frontend technologies does AlphaWave specialize in?",
+        "expected_urls": [
+          "https://alphawave.hr/pages/about-us.html",
+          "https://alphawave.hr/pages/services.html"
+        ],
+        "retrieved_urls": [
+          "https://alphawave.hr/pages/aidevelopment.html",
+          "https://alphawave.hr/pages/about-us.html",
+          "https://alphawave.hr/pages/softwaredev.html",
+          "https://alphawave.hr/pages/services.html",
+          "https://alphawave.hr/pages/services.html"
+        ],
+        "first_hit_rank": 2,
+        "reciprocal_rank": 0.5
+      },
+      {
+        "id": "q017",
+        "question": "What is AlphaWave's approach to building AI chatbots?",
+        "expected_urls": [
+          "https://alphawave.hr/pages/aidevelopment.html",
+          "https://alphawave.hr/pages/information/rag.html"
+        ],
+        "retrieved_urls": [
+          "https://alphawave.hr/pages/aidevelopment.html",
+          "https://alphawave.hr/pages/about-us.html",
+          "https://alphawave.hr",
+          "https://alphawave.hr/",
+          "https://alphawave.hr/pages/aidevelopment.html"
+        ],
+        "first_hit_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "id": "q018",
+        "question": "What makes AlphaWave different from other IT companies?",
+        "expected_urls": [
+          "https://alphawave.hr/pages/aidevelopment.html",
+          "https://alphawave.hr/pages/about-us.html"
+        ],
+        "retrieved_urls": [
+          "https://alphawave.hr/pages/aidevelopment.html",
+          "https://alphawave.hr",
+          "https://alphawave.hr/",
+          "https://alphawave.hr/pages/about-us.html",
+          "https://alphawave.hr/pages/information/laravel.html"
+        ],
+        "first_hit_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "id": "q019",
+        "question": "How does AlphaWave handle data retention in their privacy policy?",
+        "expected_urls": [
+          "https://alphawave.hr/pages/legal/privacypolicy.html"
+        ],
+        "retrieved_urls": [
+          "https://alphawave.hr/pages/legal/privacypolicy.html",
+          "https://alphawave.hr/pages/legal/privacypolicy.html",
+          "https://alphawave.hr/pages/aidevelopment.html",
+          "https://alphawave.hr/pages/information/Computer_vision.html",
+          "https://alphawave.hr/pages/information/rag.html"
+        ],
+        "first_hit_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "id": "q020",
+        "question": "What cloud services does AlphaWave offer?",
+        "expected_urls": [
+          "https://alphawave.hr/pages/about-us.html",
+          "https://alphawave.hr/pages/services.html"
+        ],
+        "retrieved_urls": [
+          "https://alphawave.hr/pages/aidevelopment.html",
+          "https://alphawave.hr/pages/services.html",
+          "https://alphawave.hr/pages/softwaredev.html",
+          "https://alphawave.hr/pages/traveler.html",
+          "https://alphawave.hr/pages/about-us.html"
+        ],
+        "first_hit_rank": 2,
+        "reciprocal_rank": 0.5
+      },
+      {
+        "id": "q021",
+        "question": "What is RAG and how does it work?",
+        "expected_urls": [
+          "https://alphawave.hr/pages/information/rag.html"
+        ],
+        "retrieved_urls": [
+          "https://alphawave.hr/pages/information/rag.html",
+          "https://alphawave.hr/pages/services.html",
+          "https://alphawave.hr/pages/information/rag.html",
+          "https://alphawave.hr/pages/aidevelopment.html",
+          "https://alphawave.hr/pages/softwaredev.html"
+        ],
+        "first_hit_rank": 1,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "id": "q022",
+        "question": "What projects has AlphaWave built for the University of Rijeka?",
+        "expected_urls": [
+          "https://alphawave.hr/pages/uniriaiassistent.html"
+        ],
+        "retrieved_urls": [
+          "https://alphawave.hr/pages/contact.html",
+          "https://alphawave.hr/pages/aidevelopment.html",
+          "https://alphawave.hr/pages/about-us.html",
+          "https://alphawave.hr/pages/portfolio.html",
+          "https://alphawave.hr/pages/softwaredev.html"
+        ],
+        "first_hit_rank": null,
+        "reciprocal_rank": 0.0
+      },
+      {
+        "id": "q023",
+        "question": "Does AlphaWave offer web development services?",
+        "expected_urls": [
+          "https://alphawave.hr/pages/services.html"
+        ],
+        "retrieved_urls": [
+          "https://alphawave.hr/pages/aidevelopment.html",
+          "https://alphawave.hr/pages/about-us.html",
+          "https://alphawave.hr/pages/softwaredev.html",
+          "https://alphawave.hr/pages/aidevelopment.html",
+          "https://alphawave.hr/pages/portfolio.html"
+        ],
+        "first_hit_rank": null,
+        "reciprocal_rank": 0.0
+      }
+    ]
+  },
+  "generation": {}
+}

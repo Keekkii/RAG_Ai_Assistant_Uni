@@ -1,10 +1,9 @@
 from fastapi import FastAPI, Depends, HTTPException, status
-from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import OAuth2PasswordBearer
 from supabase import create_client, Client
-from app.rag import generate_answer, stream_answer
+from app.rag import generate_answer
 from dotenv import load_dotenv
 import json
 import os
@@ -59,7 +58,6 @@ async def get_current_user(token: str = Depends(oauth2_scheme)):
 # --- Models ---
 class QuestionRequest(BaseModel):
     question: str
-    session_start: str | None = None
 
 class HistoryRequest(BaseModel):
     role: str
@@ -93,48 +91,12 @@ def chat(request: QuestionRequest, token: str = Depends(oauth2_scheme), user=Dep
     user_name = user.user_metadata.get("full_name", "User")
     
     answer = generate_answer(
-        request.question,
-        user_email=user_email,
+        request.question, 
+        user_email=user_email, 
         user_name=user_name,
         chat_history=chat_history_str
     )
     return {"answer": answer}
-
-@app.post("/chat/stream")
-def chat_stream(request: QuestionRequest, token: str = Depends(oauth2_scheme), user=Depends(get_current_user)):
-    chat_history_str = ""
-    try:
-        supabase.postgrest.auth(token)
-        query = supabase.table("chat_history") \
-            .select("role", "content") \
-            .eq("user_id", str(user.id)) \
-            .order("created_at", desc=True) \
-            .limit(10)
-
-        if request.session_start:
-            query = query.gte("created_at", request.session_start)
-
-        history_res = query.execute()
-
-        history_parts = []
-        for msg in reversed(history_res.data):
-            role = "AI" if msg['role'] == "assistant" else "User"
-            history_parts.append(f"{role}: {msg['content']}")
-        chat_history_str = "\n".join(history_parts)
-    except Exception as e:
-        print(f"Memory Fetch Warning: {e}")
-
-    return StreamingResponse(
-        stream_answer(  #generator postaje html body
-            request.question,
-            user_email=user.email,
-            user_name=user.user_metadata.get("full_name", "User"),
-            chat_history=chat_history_str,
-            session_start=request.session_start
-        ),
-        media_type="text/event-stream", #SSE contnet-type
-        headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"}
-    )
 
 @app.get("/history")
 def get_history(token: str = Depends(oauth2_scheme), user=Depends(get_current_user)):
@@ -191,7 +153,7 @@ def get_logs(user=Depends(get_current_user)):
                 except:
                     continue
     
-    return logs[::-1][:500]
+    return logs[::-1][:50]
 
 @app.get("/health")
 def health():

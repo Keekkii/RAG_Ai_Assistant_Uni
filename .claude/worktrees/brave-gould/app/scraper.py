@@ -1,11 +1,9 @@
-import argparse
-
 import requests
 from bs4 import BeautifulSoup
-from urllib.parse import urljoin, urlparse
-
 from app.chunking import chunk_text
-from app.database import insert_document, get_connection
+from app.database import insert_document
+from urllib.parse import urljoin, urlparse
+from app.database import get_connection
 
 
 def scrape_page(url: str) -> dict:
@@ -14,8 +12,8 @@ def scrape_page(url: str) -> dict:
 
     soup = BeautifulSoup(response.text, "html.parser")
 
-    # Remove scripts, styles and layout/navigation elements
-    for tag in soup(["script", "style", "noscript", "nav", "header", "footer"]):
+    # Remove scripts and styles
+    for tag in soup(["script", "style", "noscript"]):
         tag.decompose()
 
     title = soup.title.string.strip() if soup.title else "No Title"
@@ -60,18 +58,11 @@ def extract_internal_links(soup, base_url: str) -> set:
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Crawl and ingest alphawave.hr into the vector DB")
-    parser.add_argument("--chunk-size", type=int, default=800, help="Chunk size in characters (default: 800)")
-    parser.add_argument("--chunk-overlap", type=int, default=120, help="Chunk overlap in characters (default: 120)")
-    args = parser.parse_args()
-
-    print(f"Chunk size: {args.chunk_size}, overlap: {args.chunk_overlap}")
-
     try:
         base_url = "https://alphawave.hr/"
 
         visited = set()
-        to_visit = {base_url}
+        to_visit = set([base_url])
 
         print("Starting crawl...")
 
@@ -90,7 +81,8 @@ if __name__ == "__main__":
                 visited.add(url)
                 continue
             visited.add(url)
-
+            
+            # Extract links from current page
             response = requests.get(url)
             soup = BeautifulSoup(response.text, "html.parser")
             links = extract_internal_links(soup, base_url)
@@ -99,7 +91,8 @@ if __name__ == "__main__":
                 if link not in visited:
                     to_visit.add(link)
 
-            chunks = chunk_text(data["content"], chunk_size=args.chunk_size, overlap=args.chunk_overlap)
+            # Chunk and insert
+            chunks = chunk_text(data["content"])
 
             for i, chunk in enumerate(chunks):
                 insert_document(
