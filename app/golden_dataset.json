@@ -262,10 +262,10 @@
   {
     "id": "q027",
     "question": "What is AlphaWave's founding year?",
-    "ground_truth": "",
-    "expected_urls": [],
-    "category": "negative",
-    "difficulty": "negative"
+    "ground_truth": "AlphaWave was founded in 2025.",
+    "expected_urls": ["https://alphawave.hr/pages/legal/impressum.html"],
+    "category": "company_info",
+    "difficulty": "hard"
   },
   {
     "id": "q028",
@@ -290,5 +290,13 @@
     "expected_urls": ["https://alphawave.hr/pages/information/laravel.html"],
     "category": "technology",
     "difficulty": "medium"
+  },
+  {
+    "id": "q031",
+    "question": "Does AlphaWave offer internships?",
+    "ground_truth": "",
+    "expected_urls": [],
+    "category": "negative",
+    "difficulty": "negative"
   }
 ]
