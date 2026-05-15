@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem C:\\\\Users\\\\malna\\\\RAG_Ai_Assistant_Uni\\\\frontend | ForEach-Object { $_.Name })",
+      "PowerShell(Get-ChildItem C:\\\\Users\\\\malna\\\\RAG_Ai_Assistant_Uni\\\\docs | ForEach-Object { $_.Name })",
+      "PowerShell(New-Item *)",
+      "PowerShell(Get-ChildItem C:\\\\Users\\\\malna\\\\RAG_Ai_Assistant_Uni | Where-Object { $_.Name -notin @\\('venv'\\) } | ForEach-Object { if \\($_.PSIsContainer\\) { \"DIR  $\\($_.Name\\)/\" } else { \"FILE $\\($_.Name\\)\" } }; Write-Output \"---\"; Get-ChildItem C:\\\\Users\\\\malna\\\\RAG_Ai_Assistant_Uni\\\\RAG_Ai_Assistant_Uni | ForEach-Object { \"  $\\($_.Name\\)\" }; Write-Output \"---\"; Get-ChildItem C:\\\\Users\\\\malna\\\\RAG_Ai_Assistant_Uni\\\\RAG_Ai_Assistant_Uni_NB\\\\notebooks | ForEach-Object { \"  $\\($_.Name\\)\" })",
+      "PowerShell(C:\\\\Users\\\\malna\\\\RAG_Ai_Assistant_Uni\\\\venv\\\\Scripts\\\\python.exe -m pip install pypdf -q; C:\\\\Users\\\\malna\\\\RAG_Ai_Assistant_Uni\\\\venv\\\\Scripts\\\\python.exe -c \"import pypdf; print\\('ok'\\)\")",
+      "PowerShell(C:\\\\Users\\\\malna\\\\RAG_Ai_Assistant_Uni\\\\venv\\\\Scripts\\\\python.exe C:\\\\Users\\\\malna\\\\RAG_Ai_Assistant_Uni\\\\read_thesis.py | Out-String)"
+    ]
+  }
+}

@@ -4,6 +4,7 @@
     "question": "What does AlphaWave do?",
     "ground_truth": "AlphaWave is an IT company focused on local AI development, advanced frontend and backend solutions, 3D web experiences, cloud systems, and custom digital products.",
     "expected_urls": [
+      "https://alphawave.hr/",
       "https://alphawave.hr/pages/about-us.html",
       "https://alphawave.hr/pages/aidevelopment.html"
     ],
@@ -23,7 +24,7 @@
   {
     "id": "q003",
     "question": "How can I contact AlphaWave?",
-    "ground_truth": "AlphaWave can be contacted via email, phone, or WhatsApp. Contact information is available on their contact page.",
+    "ground_truth": "AlphaWave can be contacted via email, phone, or WhatsApp to discuss project proposals, services, and pricing. They respond to all inquiries about their process and what to expect when working together.",
     "expected_urls": [
       "https://alphawave.hr/pages/contact.html"
     ],
@@ -294,6 +295,188 @@
   {
     "id": "q031",
     "question": "Does AlphaWave offer internships?",
+    "ground_truth": "",
+    "expected_urls": [],
+    "category": "negative",
+    "difficulty": "negative"
+  },
+  {
+    "id": "q032",
+    "question": "What is AlphaWave's approach to software development?",
+    "ground_truth": "AlphaWave builds custom software solutions by aligning technical decisions with real operational workflows. They combine Edge AI, RAG, and 3D visualisation to turn complex challenges into intelligent digital experiences. Their process involves working closely with teams to define incidents, automate dispatch and ticketing workflows, and build data pipelines that transform raw inputs into actionable insights, with experience in production AI, privacy-first deployments, and enterprise integrations.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/softwaredev.html"
+    ],
+    "category": "services",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q033",
+    "question": "What projects are featured in AlphaWave's portfolio?",
+    "ground_truth": "AlphaWave's portfolio features projects across three areas: software development (Traveler Booking Platform, NRG Heat Loss Calculator), 3D design and animation (EcoCube), and AI development (UNIRI Sports Center AI Assistant). These projects demonstrate how AlphaWave transforms ideas into modern digital experiences by combining their own technology with a network of external partners.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/portfolio.html"
+    ],
+    "category": "general",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q034",
+    "question": "What is the NRG Heat Loss Calculator?",
+    "ground_truth": "The NRG Heat Loss Calculator is an internal web-based platform developed by AlphaWave in collaboration with NRG Awareness, a heating and ventilation technology provider. It enables consultants to capture building and room-level parameters during client conversations and quickly generate structured heat-loss assessments paired with energy-saving estimates, recommendations, and product-aligned next steps. AlphaWave delivered the full software implementation covering architecture, UX, and calculation workflow orchestration.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/NRG_Heat_Loss_Calculator.html"
+    ],
+    "category": "project",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q035",
+    "question": "What kind of real-time 3D experiences does AlphaWave build?",
+    "ground_truth": "AlphaWave creates real-time interactive 3D experiences using modern rendering pipelines, presenting products, environments, and concepts through immersive visuals, smooth animations, and tailored user interactions. Every model is engineered for optimised web performance, lighting accuracy, responsiveness, and seamless user engagement across all devices, with custom controls allowing users to explore each scene intuitively.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/information/3dmodels.html"
+    ],
+    "category": "technical",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q036",
+    "question": "What types of operational problems does AlphaWave's software development address?",
+    "ground_truth": "AlphaWave's software development helps organisations streamline operations, automate workflows, and modernise their business processes. They work closely with teams to define incidents, automate dispatch and ticketing processes, and build data pipelines that transform raw inputs into actionable insights. Their experience with production AI, privacy-sensitive deployments, and user-facing decision support systems enables rapid iteration, resulting in scalable, maintainable platforms that translate AI outputs into practical operational actions.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/softwaredev.html"
+    ],
+    "category": "services",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q037",
+    "question": "What specific challenge did AlphaWave solve for NRG Awareness?",
+    "ground_truth": "NRG Awareness needed an internal tool to help consultants move from early-stage prospect data to a credible heat-loss assessment and a product-backed recommendation in a single, repeatable workflow during sales conversations. Heat-loss calculation is technical but the user journey is commercial, so AlphaWave built a platform that captures building and room-level parameters and outputs structured assessments with product-aligned next steps — removing the bottleneck between technical calculation and actionable sales guidance.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/NRG_Heat_Loss_Calculator.html"
+    ],
+    "category": "project",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q038",
+    "question": "What were the main technical challenges AlphaWave faced when building 3D web models?",
+    "ground_truth": "The primary challenge was creating high-quality, optimised 3D models suitable for real-time rendering while preserving visual fidelity. Balancing polygon count, texture resolution, and performance was essential to ensure smooth interaction across devices. Additional complexity came from preparing assets for seamless import into Unreal Engine, requiring consistent UV mapping, clean topology, and efficient material setups without compromising artistic detail.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/information/3dmodels.html"
+    ],
+    "category": "technical",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q039",
+    "question": "Where is AlphaWave's office located and how can they be reached?",
+    "ground_truth": "AlphaWave's office is located at Radmile Matejčić 10, 51000 Rijeka, Croatia, inside the Science and Technology Park STEPRI on the main University campus. They can be reached by phone at +385 91 5866923 or by email at info@alphawave.hr, and also accept contact via WhatsApp.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/contact.html"
+    ],
+    "category": "contact",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q040",
+    "question": "Who are the founders and leaders of AlphaWave?",
+    "ground_truth": "AlphaWave was founded by Ivan Marin, who serves as Chairman of the Board and CEO, and Mateo Perčinić, who serves as Member of the Board and CTO. The company is registered as AlphaWave d.o.o. (Limited Liability Company) with headquarters in Rijeka, Croatia.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/legal/impressum.html"
+    ],
+    "category": "company_info",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q041",
+    "question": "What technologies were used to build the Traveler booking platform?",
+    "ground_truth": "The Traveler booking platform was built with Vue.js for the frontend and Laravel with MySQL via REST APIs for the backend. The platform is multilingual, SEO-ready, and optimised for peak-season traffic, giving guests rich property pages with filtering by region, dates, price, and amenities, while giving the internal team a single admin system for managing availability, enquiries, and content.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/traveler.html"
+    ],
+    "category": "technical",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q042",
+    "question": "What is the EcoCube and what problem does it solve for sailors?",
+    "ground_truth": "EcoCube is a modular, floating waste-collection station designed to prevent discharge of waste into the sea by making disposal easy for sailors without detours. Boats can dock alongside it, sort solid waste into separate containers for plastic, glass, metal, paper, and mixed waste, pump out black water via a vacuum hose system, and optionally refill with desalinated water — all controllable via a mobile app or on-unit screen with contactless payment.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/ecocube.html"
+    ],
+    "category": "project",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q043",
+    "question": "What problem did the UNIRI Sports Center AI Assistant solve?",
+    "ground_truth": "Before the AI Assistant, key information at the UNIRI Sports Center was scattered across PDFs, website pages, spreadsheets, Word documents, and physical notice boards, making it hard for students and staff to get quick answers. The AI Assistant centralised this data, automated routine questions, and delivers clear answers through an intuitive interface — helping students, coaches and staff instantly find training schedules, facility availability, sports events, and internal communications.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/uniriaiassistent.html"
+    ],
+    "category": "project",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q044",
+    "question": "How does AlphaWave apply computer vision in smart city environments?",
+    "ground_truth": "In smart city environments, AlphaWave uses YOLO-based detection on edge GPU devices to transform live camera feeds into actionable operational signals. Specific applications include detecting waste overflow, illegal dumping, and bin damage for municipalities. The output feeds directly into dispatch, ticketing, and control room workflows, replacing reliance on periodic inspections or citizen reports with continuous, real-time event detection.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/information/Computer_vision.html"
+    ],
+    "category": "technical",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q045",
+    "question": "How does AlphaWave use computer vision in port operations?",
+    "ground_truth": "In port operations, AlphaWave deploys real-time computer vision pipelines on edge GPU devices to monitor perimeter security, safety compliance, and asset flow. Using YOLO-based detection and object tracking with zone logic, the system transforms live camera feeds into structured incident data that feeds directly into dispatch, ticketing, and control room workflows — enabling targeted responses without relying on raw video streams.",
+    "expected_urls": [
+      "https://alphawave.hr/pages/information/Computer_vision.html"
+    ],
+    "category": "technical",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q046",
+    "question": "What core areas does AlphaWave specialize in according to their homepage?",
+    "ground_truth": "According to their homepage, AlphaWave specialises in three core areas: software development (including custom management software and IoT software), AI development and integration (including AI implementation and API integration), and 3D design and animation including 3D visualisation. They describe themselves as a highly innovative software company combining experienced industry experts with young, innovative designers and developers.",
+    "expected_urls": [
+      "https://alphawave.hr/"
+    ],
+    "category": "general",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q047",
+    "question": "Does AlphaWave offer mobile app development?",
+    "ground_truth": "",
+    "expected_urls": [],
+    "category": "negative",
+    "difficulty": "negative"
+  },
+  {
+    "id": "q048",
+    "question": "What is AlphaWave's pricing for AI development services?",
+    "ground_truth": "",
+    "expected_urls": [],
+    "category": "negative",
+    "difficulty": "negative"
+  },
+  {
+    "id": "q049",
+    "question": "Has AlphaWave won any industry awards?",
+    "ground_truth": "",
+    "expected_urls": [],
+    "category": "negative",
+    "difficulty": "negative"
+  },
+  {
+    "id": "q050",
+    "question": "Does AlphaWave have a blog or newsletter?",
     "ground_truth": "",
     "expected_urls": [],
     "category": "negative",

@@ -21,3 +21,7 @@ dist-ssr
 db.sqlite3
 data/
 *.log
+
+# Jupyter
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
